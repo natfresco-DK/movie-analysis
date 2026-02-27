@@ -29,13 +29,13 @@
       </thead>
 
       <tbody>
-      <tr>
-        <td>1963</td>
-        <td>138</td>
-        <td><strong>8 1/2</strong></td>
-        <td><span class="genre-dot"></span>Drama</td>
-        <td>80</td>
-        <td><span class="badge">Yes</span></td>
+      <tr th:each="movie: ${movies}">
+        <td th:text="${movie.year}">1963</td>
+        <td th:text="${movie.length}">138</td>
+        <td th:text="${movie.title}"><strong>8 1/2</strong></td>
+        <td th:text="${movie.subject}"><span class="genre-dot"></span>Drama</td>
+        <td th:text="${movie.popularity}">80</td>
+        <td><span th:text="${movie.awards}" class="badge">Yes</span></td>
       </tr>
       </tbody>
     </table>
